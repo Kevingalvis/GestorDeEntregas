@@ -1,0 +1,695 @@
+/*RESETEAMOS LOS ESTILOS DE LA PAGINA WEB*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+/*AGREGAMOS LOS COLORES Y TAMAÑO PREDENTERMINADOS A UTILIZAR*/
+:root{
+    
+    --main-color-azul: #0071BC;
+    --main-color-azulDark: #094668;
+    --main-color-white: #fff;
+    
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*
+    CREAMOS LOS ESTILOS DEL HEADER
+    CREAMOS EL EL HEADER PEGADO A LA PARTE SUPERIOR CON STICKY
+*/
+
+.father-header{
+    width: 100%;
+    height: 8rem; /*96PX*/
+    background-color: var(--main-color-white);
+    border-bottom: 4px var(--main-color-azul) solid;
+    position: sticky;
+    top: 0;
+    z-index: 90;
+}
+
+/*
+    CREAMOS EL CONTENIDO DE LO QUE VA A TENER EL HEADER
+*/
+.header{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+   
+}
+.header-logo{
+    width: 25%;
+    height: 100%;
+ 
+}
+.logo{
+    width: 40%;
+    height: 100%;
+    margin: 0 auto;
+    
+    
+}
+.logo img{
+    width: 100%;
+    height: 85%;
+    margin-top: 0.5rem;
+   
+}
+
+.header-text{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.header-text h2{
+    font-size: 2rem;
+    color: var(--main-color-azul);
+}
+.header-agua{
+    width: 20%;
+    height: 100%;
+   
+}
+.logo-agua{
+    width: 40%;
+    height: 100%;
+    margin: 0 auto;
+    
+}
+.logo-agua img{
+    width: 100%;
+    height: 85%;
+    margin-top: 0.5rem;
+    opacity: 0.2;
+}
+
+/*SECTION DE ADMIN*/
+
+.father-section-admin{
+    width: 80%;
+    height: 25vh;
+    margin: 50px auto;
+    border: 2px solid var(--main-color-azul);
+   
+}
+.art-admin{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
+  
+}
+.text-admin{
+    
+    width: 300px;
+    position: absolute;
+    top: -1rem;
+    left: 3rem;
+    text-align: center;
+    color: var(--main-color-azulDark);
+    background-color: var(--main-color-white) ;
+}
+
+
+/*DIV DEL BOTON DE LA LISTA DESPEGABLE*/
+
+
+.admin-list{
+    width: 25%;
+    height: 95%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-right: 2px solid var(--main-color-azul);
+}
+.cont-select{
+    padding: 15px;
+    background: none;
+    border: none;
+    border: 1px var(--main-color-azul) solid;
+    color: #0071BC;
+    outline: none;
+}
+
+
+
+.list{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    margin-top: 25px;
+}
+
+.list a{
+    color: var(--main-color-white);
+    text-decoration: none;
+}
+
+/*CONTENEDOR DE LOS DATOS DEL ADMIN A VISUALIZAR*/
+.admin-info{
+    width: 25%;
+    height: 100%;
+   
+}
+.info{
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    
+    justify-content: center;
+    
+}
+.info h3{
+    color: var(--main-color-azulDark);
+    padding: 1px;
+}
+
+/*CONTENEDOR DE FECHA*/
+.admin-fecha{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    
+    
+}
+.fecha{
+    width: 95%;
+    height: 95%;
+    margin: 0 auto;
+    display: flex;
+    color: var(--main-color-azulDark);
+    border-left: 2px solid var(--main-color-azul);
+    padding: 20px;
+}
+
+.fecha-dia{
+    font-size: 10rem;
+}
+.info-fecha{
+    width: 100%;
+    height: 50%;
+    margin-top: 19px;
+   
+}
+.fecha-mes{
+    font-size: 3rem;
+}
+.fecha-anio{
+    font-size: 4rem;
+}
+
+/*section de datos quien recibe*/
+
+.sect-user{
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+    border: 2px solid #505050;
+}
+
+.art-user{
+    width: 100%;
+
+    height: auto;
+   
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.data-user{
+    width: 30%;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 15px;
+    padding: 20px;
+ 
+
+}
+
+.data-user label{
+    color: #094668;
+    font-weight: bold;
+    padding: 5px;
+}
+.data-user input{
+    padding: 5px;
+    border: none;
+    width: 80%;
+    outline: none;
+    border-bottom: 1px var(--main-color-azul) solid;
+}
+
+/*EFECTOS ERROR DATOS DEL USER CLIENTE*/
+.data-user .error-input{
+    border-bottom: 1px red solid;
+    color: red
+}
+.data-user .error-label{
+   
+    color: red
+}
+
+.data-activos{
+    width: 65%;
+    border-left: 3px #505050 solid;
+  
+   
+}
+.data-activos h2{
+    padding: 15px;
+}
+.activos-form{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+   
+}
+.grupo-form-activo{
+    width: 30%;
+    height: 100%;
+    margin: 5px;
+}
+.cont-select-activo{
+    width: 90%;
+    height: 35px;
+    background-color: none;
+    border: none;
+    border: 1px var(--main-color-azulDark) solid;
+    margin-left: 2px;
+
+}
+.label-serial{
+    font-size: 15px;
+    color: #094668;
+    font-weight: bold;
+    
+}
+.input-serial{
+    border: none;
+    border-bottom: 1px #094668 solid;
+    
+    
+}
+.grupo-form-text{
+    width: 100%;
+    height: auto;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+   
+}
+.label-observacion {
+    font-size: 15px;
+    color: #094668;
+    font-weight: bold; 
+}
+.text-area{
+    margin: 15px;
+}
+
+/*contenedor guardar*/
+.cont-guardar{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
+.cont-guardar button{
+    padding: 10px;
+    margin: 5px;
+    background-color: var(--main-color-azulDark);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    
+}
+
+/*EFECTOS ERROR DATOS DEL USER CLIENTE*/
+.error-Ainput{
+    border-bottom: 1px red solid;
+    color: red
+}
+.error-Alabel{
+   
+    color: red
+}
+
+
+
+
+/*section del boton mostrar*/
+
+.cont-mostrar-data{
+    width: 80%;
+    height: auto;
+    margin: 10px auto;
+    padding: 15px;
+    display: flex;
+    justify-content: end;
+    background: var(--main-color-azulDark);
+}
+.cont-mostrar-data button{
+    padding: 10px;
+    background: none;
+    border: none;
+    outline: none;
+    color: var(--main-color-white);
+    border: 1px var(--main-color-white) solid;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+/*contenedor en donde se va a mostrar los datos view*/
+.cont-view-data{
+    width: 100%;
+    height: auto;
+}
+.data-disabled{
+    display: none;
+}
+.view{
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+    border: 2px #094668 solid;
+
+  
+}
+.filter{
+    width: 100%;
+    height: 75px;
+    display: flex;
+    align-items: center;
+}
+.filter label{
+    color: var(--main-color-azulDark);
+    padding: 5px;
+}
+
+.cont-title-table{
+    width: 100%;
+    height: auto;
+   
+   
+}
+.thead{
+    width: 100%;
+ 
+}
+.thead tr th{
+    display: inline-block;
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    letter-spacing: 2px;
+    font-size: 10px;
+    background-color:var(--main-color-azulDark);
+    color: var(--main-color-white);
+    border: 1px #fff solid;
+}
+.tbody{
+    width: 100%;
+   
+}
+
+.tbody tr td{
+    display: inline-block;
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    letter-spacing: 2px;
+    font-size: 10px;
+    color: var(--main-color-azulDark);
+    padding-left: 5px;
+    border: 1px var(--main-color-azulDark) solid;
+    overflow: hidden;
+
+}
+.filtro{
+    display: none;
+   
+
+}
+/* .filtro{
+    display: none;
+   
+}
+ */
+
+/*botones tablas*/
+.btn-view{
+    padding: 10px;
+    background: none;
+    border: none;
+    border: 1px var(--main-color-azul) solid;
+    border-radius: 5px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+.btn-edit{
+    padding: 10px;
+    background: none;
+    border: none;
+    border: 1px var(--main-color-azul) solid;
+    border-radius: 5px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+.btn-printer{
+    padding: 10px;
+    background: none;
+    border: none;
+    border: 1px var(--main-color-azul) solid;
+    border-radius: 5px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+/*modal visualizar datos*/
+.view-modal{    
+    width: 100%;
+    height: 100vh;
+    background-color: #2198c09f;
+    position: fixed;
+    top: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 90;
+}
+.view_disable{
+    display: none;
+}
+.modal{
+    width: 50%;
+    height: auto;
+    background-color: var(--main-color-white);
+    border-radius: 55px;
+    overflow: hidden;
+}
+.header-modal{
+    width: 100%;
+    height: 95px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color:var(--main-color-azulDark);
+    color: var(--main-color-white);
+    
+}
+.btn-cerrar{
+    font-size: 25px;
+    padding: 5px;
+    border: none;
+    background: none;
+    color: #fff;
+    cursor: pointer;
+}
+.body-modal{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 15px;
+    flex-wrap: wrap;
+  
+}
+.body-title{
+    width: 100%;
+   
+}
+
+.body-title label{  
+    width: 200px;
+    padding: 5px;
+    margin: 5px;
+    display: inline-block;
+    color: #094668;
+    font-weight: bold;
+    text-align: end;
+}
+.body-title input{  
+    width: 300px;
+    padding: 5px;
+    background: none;
+    border: none;
+    outline: none;
+    border-bottom: 1px var(--main-color-azulDark) solid; 
+    
+}
+.hr{
+    margin: 15px;
+}
+
+.body-observacion{
+    width: 100%;
+    background-color: var(--main-color-azulDark);
+    text-align: center;
+    padding: 10px;
+    color: #fff;
+    letter-spacing: 2px;
+}
+
+.editArea{
+    width: 100%;
+
+    display: flex;
+    margin: 5px;
+    justify-content: center;    
+}
+.editText{
+    width: 80%;
+}
+
+.button-modal{
+    width: 100%;
+    padding: 15px;
+    display: flex;
+    justify-content: end;
+}
+.button-modal button{
+    margin-right: 15px;
+}
+.guardar{
+    display: none;
+}
+.cancelar{
+    display: none;
+}
+.habilitar{
+    display: block;
+}
+
+/*Imprimir Documento Modal*/
+
+.cont-printer{
+    width: 100%;
+    height: 100vh;
+    background-color: #2198c09f;
+    position: fixed;
+    top: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 90;
+}
+.disabled-printer{
+    display: none;
+}
+.printer{
+    width: 80%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #fff;
+}
+
+.header-printer{
+    width: 100%;
+    height: 10rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-bottom: 2px #094668 solid;
+}
+.header-printer img{
+    width: 100px;
+}
+.printer-date{
+    width: 80%;
+   
+    margin: 10px auto;
+}
+.printer-date h3{
+    padding: 5px;
+}
+
+.printer-body{
+    width: 80%;
+    height: 50%;
+    margin: 10px auto;
+    display: flex;
+    flex-direction: column;
+  
+}
+.printer-body h4{
+    padding: 55px 0px;
+}
+
+#customers {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  #customers td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  #customers tr:nth-child(even){background-color: #f2f2f2;}
+  
+  #customers tr:hover {background-color: #ddd;}
+  
+  #customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: var(--main-color-azulDark);
+    color: white;
+  }
+
+  .imprimir{
+    width: 20%;
+    margin: 15px;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+
